@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retro Forma</title>
+
+    <!-- Tailwind css link---- -->
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Wosome -->
+
+    <script src="https://kit.fontawesome.com/b439bf90d6.js" crossorigin="anonymous"></script>
+    <!-- css link -->
+
+    <link rel="stylesheet" href="./styles/index.css" />
+</head>
+
+<body>
+    <header>
+        <div>
+            <!-- Nave bar state------- -->
+            <nav class="navbar">
+                <div class="container mx-auto flex justify-between items-center py-4 px-6">
+                    <!-- Logo -->
+                    <div class="text-2xl text-black font-semibold">ReTro</div>
+
+                    <!-- Icons -->
+                    <div class="flex space-x-4 text-black">
+                        <!-- Home Icon -->
+                        <div class="tooltip tooltip-bottom" data-tip="Home">
+                            <button class="btn btn-circle btn-ghost hover:bg-gray-200">
+                                <i class="fa-solid fa-house-chimney"></i>
+                            </button>
+                        </div>
+
+                        <!-- Edit Icon -->
+                        <div class="tooltip tooltip-bottom" data-tip="Edit">
+                            <button class="btn btn-circle btn-ghost hover:bg-gray-200">
+                                <i class="fa-regular fa-pen-to-square"></i>
+                            </button>
+                        </div>
+
+                        <!-- Add Icon -->
+                        <div class="tooltip tooltip-bottom" data-tip="Add">
+                            <button class="btn btn-circle btn-ghost hover:bg-gray-200">
+                                <i class="fa-solid fa-user-plus"></i>
+                            </button>
+                        </div>
+
+                        <!-- Flag Icon -->
+                        <div class="tooltip tooltip-bottom" data-tip="choose country">
+                            <button class="btn btn-circle btn-ghost hover:bg-gray-200">
+                                <i class="fa-regular fa-flag"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Button -->
+                    <button class="rounded-full ... bg-[#797DFC] px-8 py-2 font-semibold text-white">
+                        Sign In
+                    </button>
+                </div>
+            </nav>
+        </div>
+
+        <section class="flex items-center justify-center">
+            <!-- Main Container -->
+            <div
+                class="bg-[url('./photo/bgbanner.png')] bg-[#12132D] text-white rounded-2xl p-10 w-full max-w-4xl shadow-lg">
+                <!-- Welcome Section -->
+                <div class="flex flex-col lg:flex-row items-center lg:items-start lg:justify-between">
+                    <!-- Left Section (Text & Search) -->
+                    <div class="flex-1">
+                        <h1 class="text-5xl font-extrabold">
+                            Welcome to the <br />
+                            <span
+                                class="bg-gradient-to-r from-[#797DFC] to-[#5d61c483] inline-block text-transparent bg-clip-text">ReTro</span>
+                            Forum
+                        </h1>
+                        <p class="mt-2 text-base text-gray-300">
+                            Share your favorite opinion and win an exclusive WP <br />
+                            forum coffee mug!
+                        </p>
+
+                        <!-- Search Bar -->
+                        <div class="">
+                            <label class="input input-bordered flex items-center gap-2">
+                                <input type="text" class="grow" placeholder="Search here anything" />
+                                <span class="badge badge-info px-5 py-4">Search</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Forum Stats Card -->
+                    <div class="bg-white text-gray-800 p-6 rounded-xl shadow-md w-48 mt-8 lg:mt-0 lg:ml-10">
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-sm font-semibold">Registered Users</span>
+                            <span class="text-lg font-bold">01</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-sm font-semibold">Forum</span>
+                            <span class="text-lg font-bold">05</span>
+                        </div>
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-sm font-semibold">Topics</span>
+                            <span class="text-lg font-bold">01</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm font-semibold">Replies</span>
+                            <span class="text-lg font-bold">01</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="pb-9 flex items-center justify-center pt-20">
+            <div class="text-center max-w-md mx-auto">
+                <h1 class="text-3xl font-bold text-gray-900">Let’s Discuss</h1>
+                <p class="mt-2 text-gray-600">
+                    Yes, you can run unit tests and view the results directly within the
+                    app. The integrated testing features allow for a streamlined
+                    experience.
+                </p>
+            </div>
+        </section>
+
+        <section class="relative p-4">
+            <div class="flex flex-col md:flex-row space-x-0 md:space-x-4">
+                <div id="card_container" class="space-y-5">
+                    <!-- --------------------------- -->
+
+                    <div
+                        class="border-solid border-2 border-sky-500 ... card bg-base-100 shadow-xl flex flex-row items-start p-4">
+
+                        <figure class="flex-shrink-0">
+
+                            <img class="h-20 rounded-xl"
+                                src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
+                                alt="Movie" />
+                        </figure>
+                        <div class="card-body p-0 ml-4">
+
+                            <div class="flex text-gray-400 space-x-4">
+                                <p>#${card.category}</p>
+                                <p>Author :${card.author.name}</p>
+                            </div>
+                            <h2 class="card-title">New movie is released!</h2>
+                            <p>Click the button to watch on Jetflix app.</p>
+                            <div class="card-actions justify-end">
+                                <button class="btn btn-primary">Watch</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ----------------------------------- -->
+                </div>
+
+                <!-- Dynamic Bar -->
+                <div class="w-full md:w-96 rounded-2xl shadow-lg p-4 mt-4 md:mt-0">
+                    <div class="flex items-center justify-between mb-2">
+                        <div class="space-x-8 md:space-x-36 flex items-center justify-between mb-2">
+                            <h2 class="border-dashed border-b-2 border-sky-500 ... text-lg font-semibold">
+                                Title
+                            </h2>
+                            <h2 id="mark-as-read"
+                                class="border-dashed border-b-2 border-sky-500 ... text-lg font-semibold">
+                                <i class="fa-solid fa-check-double"></i> Mark as read (0)
+                            </h2>
+                        </div>
+                    </div>
+                    <div id="dynamic-bar-content" class="space-y-2">
+                        <!-- Dynamic content will be added here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class=" flex justify-center pt-10 pb-10">
+            <div class="rounded-lg bg-[#12132D] w-full md:w-1/2 flex flex-col md:flex-row items-center md:items-start">
+                <div class="card-body w-full md:w-1/2">
+                    <h2 class="card-title text-white text-3xl">Join Our Forum</h2>
+                    <p class="text-gray-400">
+                        Share your favorite opinion and win a WP forum coffee mug! Yes,
+                        you can run unit tests and view the results directly within the
+                        app.
+                    </p>
+                    <button class="bg-[#797DFC] outline-none border-none btn">
+                        Register Now
+                    </button>
+                </div>
+                <div class="w-full md:w-1/2">
+                    <img src="./photo/joinforum.png" alt="Forum Image" class="w-full h-auto md:h-full object-cover" />
+                </div>
+            </div>
+        </section>
+        <!-- letest post -->
+        <section class="pt-10 pb-10 flex justify-center items-center">
+            <div class="text-center">
+                <p class="text-3xl font-bold">Latest Posts</p>
+                <p class="text-gray-400">Yes, you can run unit tests and view the results directly within the app. The
+                    <br>
+                    integrated testing features allow for a streamlined .
+                </p>
+            </div>
+        </section>
+
+        <!-- letest post content -->
+        <div id="letest_post_content" class="pb-24 flex flex-wrap justify-center space-x-5 md:space-x-5 md:flex-nowrap">
+            <!-- <div class="card bg-base-100 w-96 shadow-xl mb-5 md:mb-0">
+                <figure>
+                    <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+                </figure>
+                <div class="card-body">
+                    <h2 class="card-title">Shoes!</h2>
+                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <div class="card-actions justify-end">
+                        <button class="btn btn-primary">Buy Now</button>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        </div>
+    </main>
+
+
+
+    <footer class="footer footer-center bg-gradient-to-b from-[#b6b9eeab] to-[#86869194] ... text-primary-content p-10">
+        <aside>
+            <p class="pb-4 font-bold text-3xl text-[#12132D]">ReTro</p>
+            <p class="text-gray-500">Contrary to popular belief, Lorem Ipsum is not simply random text. <br> It has
+                roots in
+                a piece of classical Latin literature from 45 BC</p>
+        </aside>
+        <nav class="text-2xl">
+            <div class="grid grid-flow-col gap-10 text-[#12132D]">
+                <a>
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a>
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a>
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a>
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+
+        </nav>
+        <div class="text-gray-500">
+            <p>2017, All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
