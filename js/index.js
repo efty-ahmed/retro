@@ -81,6 +81,21 @@ const updateDynamicBar = (title, viewCount) => {
 
 loadcard();
 
+//handle search btn
+//----------------------->>>>>>
+window.addEventListener("load", function () {
+    // Hide loader when page is fully loaded
+    document.getElementById("loader").classList.add("hidden");
+  });
+  
+  window.addEventListener("beforeunload", function () {
+    // Show loader when page is about to unload
+    document.getElementById("loader").classList.remove("hidden");
+  });
+
+  //--------------------------->>>>>>
+
+//all post-------------
 const loadPostContent = async ()=>{
     const res = await fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts');
     const data = await res.json();
